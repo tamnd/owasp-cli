@@ -7,13 +7,17 @@ weight: 30
 Once `owasp` is on your `PATH`:
 
 ```bash
-owasp --help       # see the command tree
-owasp version      # build info
+owasp --help            # see the command tree
+owasp version           # build info
+
+owasp list              # list all OWASP cheat sheets
+owasp list -o json      # as a JSON array
+owasp list -o csv       # as CSV (pipe into spreadsheet tools)
+
+owasp search sql        # find sheets matching "sql"
+owasp search xss -o jsonl | jq .url
 ```
 
-This is a fresh scaffold, so the command tree is just `version` for now. Add
-your first real command in `cli/`, build on the `owasp` library package,
-and document it here.
-
-A good first command usually fetches one thing and prints it as JSON, so the
-output pipes straight into `jq` and the rest of your tools.
+The `list` command fetches the full catalog from the OWASP GitHub repository
+in a single request. `search` filters the result client-side, so it also uses
+exactly one request.

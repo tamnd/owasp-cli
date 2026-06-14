@@ -1,22 +1,20 @@
 ---
 title: "owasp"
-description: "A command line for owasp."
-heroTitle: "owasp, from the command line"
-heroLead: "A command line for owasp. One pure-Go binary, no API key, output that pipes into the rest of your tools."
+description: "Browse OWASP Cheat Sheet Series from the command line"
+heroTitle: "owasp-cli, from the command line"
+heroLead: "Browse the OWASP Cheat Sheet Series. One pure-Go binary, no API key, output that pipes into the rest of your tools."
 heroPrimaryURL: "/getting-started/quick-start/"
 heroPrimaryText: "Get started"
 ---
 
-A command line for owasp.
+Browse the OWASP Cheat Sheet Series.
 
 ```bash
 owasp --help            # the command tree
 owasp version           # build info
+owasp list              # list all cheat sheets
+owasp search sql        # search sheets by topic
 ```
-
-This site is a starting point. As you add commands, document each one under
-[guides](/guides/) and keep the [CLI reference](/reference/cli/) in step with
-the real flag set.
 
 ## Where to go next
 
